@@ -75,12 +75,12 @@ query = "deepseek V3主要改进"
 retriever_result1 = retriever1(query=query)
 retriever_result2 = retriever2(query=query)
 retriever_result3 = retriever3(query=query)
-# for node in retriever_result1:
-#     print("retriever_result1:", node.get_content())
-# for node in retriever_result2:
-#     print("retriever_result2:", node.get_content())
-# for node in retriever_result3:
-#     print("retriever_result3:", node.get_content())
+for node in retriever_result1:
+    print("retriever_result1:", node.get_content())
+for node in retriever_result2:
+    print("retriever_result2:", node.get_content())
+for node in retriever_result3:
+    print("retriever_result3:", node.get_content())
 
 # 5. 去重: 合并结果并基于内容去重
 combined_results = retriever_result1 + retriever_result2 + retriever_result3
